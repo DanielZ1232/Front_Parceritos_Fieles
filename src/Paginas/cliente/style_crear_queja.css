@@ -1,0 +1,45 @@
+/* src/cliente/style_crear_queja.css */
+
+.crear-queja {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.crear-queja h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #550653;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #440652;
+}

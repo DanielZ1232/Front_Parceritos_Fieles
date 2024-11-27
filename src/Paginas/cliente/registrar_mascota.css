@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Asegúrate de que la imagen cubra el área correctamente */
+    background-attachment: fixed; /* Fija la imagen de fondo si es necesario */
+    color: #000; /* Color de texto predeterminado para el cuerpo */
+}
+
+.title {
+    font-family: 'Poppins-SemiBold', sans-serif; /* Fuente */
+    color: #28a745; /* Color verde */
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #1db954, #1ca54f); /* Gradiente de color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para ver el gradiente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    animation: fadeInTitle 0.8s ease-out; /* Efecto de entrada */
+    opacity: 0; /* Inicio de la animación */
+    transform: translateY(-20px);
+}
+
+.fade-in {
+    opacity: 1; /* Fin de la animación */
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+.container-2 {
+    max-width: 50%;
+    margin: 20px auto; /* Añade margen superior para evitar solapamiento con la imagen */
+    padding: 10px 20px;
+    background-color: #fffffff8; /* Fondo blanco semi-transparente */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
+    position: relative; /* Asegúrate de que el contenedor esté posicionado correctamente */
+    z-index: 1; /* Asegúrate de que el contenedor esté por encima de otros elementos */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000; /* Color negro para los encabezados */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    width: 48%; /* Ajusta este valor según sea necesario */
+    margin-bottom: 15px;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000; /* Color negro para las etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Botón específico para RegistrarMascota */
+.boton-registro {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #04a02b; /* Color verde para el botón */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-registro:hover {
+    background-color: #028a0f; /* Color verde más oscuro al pasar el cursor */
+}
+
+/* Círculo flotante con WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta según el espacio que desees desde el borde inferior */
+    right: 20px; /* Ajusta según el espacio que desees desde el borde derecho */
+    z-index: 1000; /* Asegúrate de que el ícono esté por encima de otros elementos */
+    background-color: #25D366; /* Fondo verde característico de WhatsApp */
+    border-radius: 50%; /* Hacer que el contorno sea circular */
+    padding: 10px; /* Espacio alrededor del ícono */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para mejorar la visibilidad */
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Color de fondo al pasar el cursor */
+}
+
+.whatsapp-float svg {
+    color: #fff; /* Color del ícono */
+}

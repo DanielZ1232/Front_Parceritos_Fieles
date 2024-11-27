@@ -1,0 +1,146 @@
+.menu-gerente-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url('../../assets/Imagenes/perro1.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    height: calc(80vh - 115px); 
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-gerente-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.bienvenido-text {
+    position: relative;
+    z-index: 2;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.emp {
+    color: #000000;
+}
+
+.equipo-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    position: relative;
+}
+
+.agregar-empleado-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.empleados-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.empleado-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cliente-search-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    width: 300px;
+    max-width: 90%;
+}
+
+.cliente-search-modal input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    display: block;
+    margin: 10px auto;
+}
+
+.buscar-btn {
+    background-color: #03ac4f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.cliente-found {
+    margin-top: 20px;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cliente-found button {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-modal-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.buscar-cliente-titulo {
+    color: black; /* Cambia el color del texto a negro */
+}

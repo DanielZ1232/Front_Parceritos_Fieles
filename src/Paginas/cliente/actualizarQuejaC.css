@@ -1,0 +1,24 @@
+
+
+.container {
+    padding: 20px;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.guardar-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

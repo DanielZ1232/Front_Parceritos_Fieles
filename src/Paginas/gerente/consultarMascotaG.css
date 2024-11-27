@@ -1,0 +1,96 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  padding: 0;
+}
+
+.content h2 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  color: #28a745;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #1db954, #1ca54f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+table.dataTable {
+  width: 100% !important;
+  max-width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+table.dataTable thead th {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table.dataTable tbody tr {
+  background-color: #f9f9f9;
+}
+
+table.dataTable tbody tr:hover {
+  background-color: #e6ffe6;
+}
+
+table.dataTable td,
+table.dataTable th {
+  padding: 15px;
+  text-align: center;
+}
+
+.btn-ver-perfil {
+  background-color: #0aad04;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-ver-perfil:hover {
+  background-color: #058a05;
+}

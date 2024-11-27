@@ -1,0 +1,122 @@
+.reservaPageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.reservaLoginWrap {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 90px 70px 50px 70px;
+  background: rgba(40, 57, 101, 0.9);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.reservaLoginHtml {
+  position: relative;
+  text-align: center;
+}
+
+.reservaTab {
+  font-size: 22px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.reservaSignIn:checked + .reservaTab,
+.reservaSignUp:checked + .reservaTab {
+  border-color: #ccd3e0;
+}
+
+.reservaLoginForm {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 20px; 
+}
+
+.reservaGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.reservaFullWidth {
+  grid-column: span 2;
+}
+
+.reservaLabel {
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+.reservaInput {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-sizing: border-box;
+}
+
+.reservaInput::placeholder {
+  color: #aaa;
+}
+
+.reservaButton {
+  width: 100%;
+  padding: 15px;
+  background-color: #1161ee;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.reservaTab {
+  font-size: 22px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+input[type="radio"]:checked + .reservaTab {
+  opacity: 1; 
+  border-color: #1161ee;
+  color: #fff;
+}
+
+input[type="radio"]:not(:checked) + .reservaTab {
+  opacity: 0.5; 
+}
+
+@media (max-width: 768px) {
+  .reservaLoginForm {
+    grid-template-columns: 1fr; 
+  }
+}

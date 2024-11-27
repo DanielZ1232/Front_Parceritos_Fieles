@@ -1,0 +1,95 @@
+/* Footer Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #595858;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: auto;
+    font-size: large;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start; /* Cambia a 'flex-start' para alinear todo a la izquierda */
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 0 0 auto; /* Mantiene el tamaño del logo */
+    margin-right: 1rem; /* Espaciado derecho para separar del texto */
+}
+
+.footer-logo-img {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 1rem;
+}
+
+.footer-section h3 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem; /* Tamaño de letra ajustado */
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem; /* Tamaño de letra ajustado */
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-media li {
+    display: inline;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em; /* Tamaño de los iconos */
+}
+
+.footer-divider {
+    border-top: 1px solid #fff;
+    margin: 1rem 0;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.8em; /* Tamaño de letra ajustado */
+}

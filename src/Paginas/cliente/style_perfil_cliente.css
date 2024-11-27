@@ -1,0 +1,25 @@
+/* src/cliente/style_perfil_cliente.css */
+
+.perfil-cliente {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.cliente-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #550653;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #440652;
+}

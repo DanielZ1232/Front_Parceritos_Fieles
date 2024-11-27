@@ -1,0 +1,116 @@
+/* Asegura que los estilos aplicados sean específicos para esta página */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.crear-queja-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.form-wrapper {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center; /* Centra el formulario verticalmente */
+}
+
+.form-container {
+    width: 80%; /* Ajusta el tamaño del formulario según tus necesidades */
+    max-width: 800px; /* Limita el tamaño máximo del formulario */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px; /* Espacio interno alrededor del formulario */
+    border: 1px solid #ccc; /* Opcional: Agrega un borde al formulario */
+    border-radius: 8px; /* Opcional: Bordes redondeados */
+    background-color: #f9f9f9; /* Opcional: Fondo del formulario */
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 10%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.form-title {
+    color: black; /* Establece el color del título a negro */
+    font-size: 24px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    margin-bottom: 20px;
+}
+
+.textarea-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 200px; /* Aumenta la altura del textarea para un formulario más grande */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none; /* Opcional: para evitar redimensionar el textarea */
+}
+
+.char-count {
+    position: absolute;
+    bottom: 10px; /* Alinea el contador a 10px desde la parte inferior del textarea */
+    right: 10px; /* Alinea el contador a 10px desde la parte derecha del textarea */
+    font-size: 14px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para legibilidad */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px 24px; /* Ajusta el tamaño del botón según tus necesidades */
+    border: none;
+    border-radius: 4px;
+    background-color: #18a32b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #17700b;
+}
+
+/* Estilos para el footer */
+.footer {
+    margin-top: auto; /* Asegura que el footer se empuje al final del contenedor */
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #25D366; /* Color de WhatsApp */
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Color verde más oscuro al pasar el mouse */
+}

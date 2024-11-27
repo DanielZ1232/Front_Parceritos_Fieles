@@ -1,0 +1,52 @@
+/* src/styles/global.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y colores globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos globales para botones */
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilo global para enlaces */
+a {
+    color: #550653;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos generales de contenedores */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Otros estilos globales */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: large;
+}

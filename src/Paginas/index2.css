@@ -1,0 +1,405 @@
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url('../assets/fonts/Poppins-Black.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-BlackItalic';
+    src: url('../assets/fonts/Poppins-BlackItalic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-BoldItalic';
+    src: url('../assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('../assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-ExtraBoldItalic';
+    src: url('../assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-ExtraLight';
+    src: url('../assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-ExtraLightItalic';
+    src: url('../assets/fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-Italic';
+    src: url('../assets/fonts/Poppins-Italic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-LightItalic';
+    src: url('../assets/fonts/Poppins-LightItalic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-Thin';
+    src: url('../assets/fonts/Poppins-Thin.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins-ThinItalic';
+    src: url('../assets/fonts/Poppins-ThinItalic.ttf') format('truetype');
+  }
+
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* Carrusel */
+.slider-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%; /* Ajusta este valor según sea necesario para coincidir con el ancho de las cartas */
+  max-width: 1500px; /* Puedes ajustar este valor para controlar el tamaño máximo */
+  margin: 10px auto; /* Centra el carrusel con el mismo margen que las cartas */
+  position: relative;
+  overflow: hidden;
+  padding: 50px 85px;
+
+}
+
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animación suave para transiciones */
+}
+
+.slider-item {
+  min-width: 30%;
+  box-sizing: border-box;
+  padding: 15px; /* Espaciado entre imágenes */
+}
+
+.slider-item img {
+  width: 100%; 
+  height: 350px; /* Ajusta la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.slider-button.left {
+  left: 0;
+}
+
+.slider-button.right {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .slider-item {
+    min-width: 50%; /* Muestra 2 imágenes en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-item {
+    min-width: 100%; /* Muestra 1 imagen en pantallas móviles */
+  }
+}
+
+  
+/* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.712);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-content form {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Ajusta la imagen para cubrir toda el área */
+  background-position: center;
+}
+
+/* Capa de sombreado encima de la imagen */
+.modal-content form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ededed24; /* Sombreado negro con transparencia */
+  z-index: -1; /* Coloca el sombreado detrás del contenido */
+  border-radius: 20px;
+}
+
+/* Estilo de los encabezados dentro del modal */
+.modal-content h2 {
+  margin-top: 0;
+  color: #333; /* Color del texto del encabezado */
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-content .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.modal-content label {
+  font-family: 'Poppins-Bold';
+  font-size: 1.1em;
+  color: #ffffff; /* Texto en blanco */
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8); /* Sombra sutil para resaltar el texto */
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: block;
+}
+
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilo para el contador de caracteres */
+.modal-content .char-counter {
+  text-align: center;
+  margin-top: 5px;
+  color: #666;
+}
+
+/* Estilo de los botones dentro del modal */
+.modal-content button[type="submit"] {
+  background-color: #4CAF50; /* Color de fondo del botón de envío */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px; /* Ancho máximo del botón */
+  text-align: center;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #3b723d; /* Color de fondo al pasar el ratón */
+}
+
+.modal-content button[type="button"] {
+  background-color: #6c757d; /* Color de fondo del botón de cierre */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px; /* Ancho máximo del botón */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal-content button[type="button"]:hover {
+  background-color: #5a6268; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el botón personalizado en el modal */
+.custom-btn {
+  color: #fff; /* Color del texto */
+  background-color: #28a745; /* Color de fondo verde */
+  border-color: #28a745; /* Color del borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid; /* Estilo del borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de fuente */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Quitar subrayado del texto */
+  display: inline-block; /* Ajusta el botón a su contenido */
+  transition: background-color 0.3s, border-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.custom-btn:hover {
+  background-color: #218838; /* Color de fondo verde más oscuro al pasar el ratón */
+  border-color: #1e7e34; /* Color del borde verde más oscuro al pasar el ratón */
+}
+
+/* Estilos para el modal de registro */
+.register-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-modal form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  flex-direction: row;
+  width: 100%; /* Asegura que el formulario ocupe el ancho completo */
+  max-width: 800px; /* Ancho máximo del formulario */
+  box-sizing: border-box;
+}
+
+.form-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fffbfb; /* Color principal del texto */
+  font-size: 3.2em !important; /* Tamaño de fuente grande y forzado */
+  font-weight: bold;
+  background: linear-gradient(90deg, #4CAF50, #2a9d8f); /* Gradiente de color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Hace el texto transparente para ver el gradiente */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidad */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  animation: fadeInTitle 0.8s ease-out; /* Efecto de aparición */
+}
+
+/* Animación para el título */
+@keyframes fadeInTitle {
+  from {
+      opacity: 0;
+      transform: translateY(-20px); /* Animación de entrada desde arriba */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Ajuste de los campos del formulario */
+.register-modal .form-group {
+  flex: 1 1 calc(50% - 10px); /* Ocupa el 50% del ancho del contenedor menos el margen */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alineación hacia la izquierda */
+  margin-bottom: 20px; /* Espacio debajo de cada campo */
+}
+
+/* Estilo de botones */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.register-modal label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.register-modal input,
+.register-modal select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.register-modal button[type="submit"] {
+  background-color: #4CAF50; /* Color de fondo del botón de envío */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px; /* Ancho máximo del botón */
+  text-align: center;
+  /*margin-top: 20px;*/
+}
+
+.register-modal button[type="submit"]:hover {
+  background-color: #3b723d; /* Color de fondo al pasar el ratón */
+}
+
+.register-modal button[type="button"] {
+  background-color: #6c757d; /* Color de fondo del botón de cierre */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px; /* Ancho máximo del botón */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-modal button[type="button"]:hover {
+  background-color: #5a6268; /* Color de fondo al pasar el ratón */
+}
+
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.imageContainer:hover .textOverlay {
+  opacity: 1;
+}

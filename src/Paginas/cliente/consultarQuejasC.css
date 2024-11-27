@@ -1,0 +1,167 @@
+html, body {
+    height: 100%; /* Asegura que el cuerpo y HTML ocupen el 100% de la altura */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+}
+
+.container {
+    flex: 1; /* Asegura que el contenedor principal ocupe todo el espacio disponible */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto del contenedor */
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto; /* Asegura que la tabla sea desplazable horizontalmente si es necesario */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.ver-btn, .actualizar-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ver-btn {
+    background-color: #1ba122;
+}
+
+.ver-btn:hover {
+    background-color: #117405;
+}
+
+.actualizar-btn {
+    background-color: #28a745;
+}
+
+.actualizar-btn:hover {
+    background-color: #218838;
+}
+
+.queja-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+/* Asegura que el footer esté siempre en la parte inferior */
+.footer-sticky {
+    margin-top: auto; /* Empuja el footer hacia abajo en el contenedor flex */
+}
+
+ /* Botón flotante de WhatsApp */
+ .whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #25D366; /* Color de WhatsApp */
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128C7E; /* Color verde más oscuro al pasar el mouse */
+  }
+
+
+ /* Estilos para el modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.actualizar-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos del formulario horizontalmente */
+}
+
+.actualizar-form h2 {
+    color: black;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.actualizar-form textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px; /* Espacio debajo del textarea */
+}
+
+.guardar-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

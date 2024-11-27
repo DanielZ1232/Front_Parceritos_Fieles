@@ -1,0 +1,88 @@
+/* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+.perfil-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos específicos para la página de perfil */
+.perfil-container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fffffff8;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
+}
+
+.perfil-user-img img {
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+}
+
+.perfil-user-img h1 {
+    padding-top: 20px;
+}
+
+.perfil-info-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.perfil-info-item-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfil-info-item, .perfil-info-item-direc, .perfil-info-item-doc {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fffffff8;
+    background-blend-mode: multiply;
+    width: 250px;
+}
+
+.perfil-info-item i, .perfil-info-item-direc i, .perfil-info-item-doc i {
+    margin-right: 10px;
+    padding: 0 3px;
+}
+
+.perfil-info-item-direc {
+    background-color: #ffffffec;
+    margin-right: 10px;
+}
+
+.perfil-info-item-doc {
+    background-color: #ffffffec;
+    margin-right: 10px;
+}
+
+.perfil-info-item-doc span, .perfil-info-item-direc span {
+    margin-left: 10px;
+}
+
+.perfil-boton {
+    padding: 20px;
+}
+
+.perfil-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1bb11b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.perfil-button:hover {
+    background-color: #055513be;
+}
